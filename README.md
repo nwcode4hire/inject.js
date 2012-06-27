@@ -56,14 +56,15 @@ Usage
 
 ### Nesting
 You can use inject.js() or inject.css() inside the callback to load additional ressource which depend on previous injected files.
-  inject.js('/path/to/jquery-1.7.1.min.js',function(){
-    inject.js('/path/to/jquery.plugin.one.js', function(){
-      $('body').one();
-    })
-    inject.js('/path/to/jquery.plugin.two.js', function(){
-      $('body').two();
-    })
-  });
+
+    inject.js('/path/to/jquery-1.7.1.min.js',function(){
+        inject.js('/path/to/jquery.plugin.one.js', function(){
+            $('body').one();
+        })
+        inject.js('/path/to/jquery.plugin.two.js', function(){
+            $('body').two();
+        })
+    });
 
 BUT: I don't recommend doing it because the dependend files are requested only after the first file has loaded.
 I plan to enable parallel loading but in order execution of files in a later version.
