@@ -31,12 +31,13 @@ I prefer adding javascript files just before the closing </body> tag.
         
         ...
         
-    <script src="/js/inject.min.js"></script>
-  </body>
+        <script src="/js/inject.min.js"></script>
+    </body>
 
 
 Usage
 -----
+
     // load and execute single script
     inject.js('/path/to/file.js')
     
