@@ -22,36 +22,36 @@ Installation
 Download the files from github and add them to your page. 
 I prefer adding javascript files just before the closing </body> tag.
 
-  <head>
-    
-       
-    
-  </head>
-  <body>
-    
-    ...
-    
+    <head>
+        
+        
+        
+    </head>
+    <body>
+        
+        ...
+        
     <script src="/js/inject.min.js"></script>
   </body>
 
 
 Usage
 -----
-  // load and execute single script
-  inject.js('/path/to/file.js')
-  
-  // load single css file
-  inject.css('/path/to/file.css')
-  
-  // load a script and execute a function after it has been loaded
-  inject.js('/path/to/file.js', function() {
+    // load and execute single script
+    inject.js('/path/to/file.js')
     
-  });
-  
-  // load a css file and execute a function after it has been loaded
-  inject.css('/path/to/file.css',function(){
+    // load single css file
+    inject.css('/path/to/file.css')
     
-  });
+    // load a script and execute a function after it has been loaded
+    inject.js('/path/to/file.js', function() {
+        
+    });
+    
+    // load a css file and execute a function after it has been loaded
+    inject.css('/path/to/file.css',function(){
+        
+    });
 
 ### Nesting
 You can use inject.js() or inject.css() inside the callback to load additional ressource which depend on previous injected files.
