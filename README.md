@@ -16,12 +16,14 @@ my javascript files do not depent on code from other files.
 What is inject.js not?
 ---------------------------
 inject.js is not a AMD/CommonJS module loader like curl, require.js, etc.
+
 inject.js is not a conditional ressource loader like yepnope.
 
 
 Installation
 ------------
 Download the files from github and add them to your page. 
+
 I prefer adding javascript files just before the closing </body> tag.
 
     <head>
@@ -69,6 +71,7 @@ You can use inject.js() or inject.css() inside the callback to load additional r
     });
 
 BUT: I don't recommend doing it because the dependend files are requested only after the first file has loaded.
+
 I plan to enable parallel loading but in order execution of files in a later version.
 
 
