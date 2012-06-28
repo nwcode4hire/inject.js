@@ -8,10 +8,8 @@
 
 (function (window,document) {
   
-  var _inject = window.inject,
-    // stateless variables 
-    appent_to = document.head || document.getElementsByTagName("head")[0]
-  ;
+  // stateless variables 
+  var appent_to = document.head || document.getElementsByTagName("head")[0];
   
   // tests 
   function is_func(func) { return Object.prototype.toString.call(func) == "[object Function]"; }
