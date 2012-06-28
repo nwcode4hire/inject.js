@@ -7,7 +7,9 @@ asynchronous resource loader with callback
 What is inject.js?
 ------------------
 inject.js is a very tiny asynchronus resource loader with callback functions.
+
 i use it for my mobile first projects to progressivly enhance the page by adding single javascript and css files in a non blocking manner.
+
 my javascript files do not depent on code from other files.
 
 
