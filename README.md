@@ -26,49 +26,55 @@ Download the files from github and add them to your page.
 
 I prefer adding javascript files just before the closing </body> tag.
 
-    <head>
-        
-        
-        
-    </head>
-    <body>
-        
-        ...
-        
-        <script src="/js/inject.min.js"></script>
-    </body>
+    <html>
+        <head>
+            
+            ...
+            
+        </head>
+        <body>
+            
+            ...
+            
+            <script src="/js/inject.min.js"></script>
+        </body>
+    </html>
 
 
 Usage
 -----
 
-    // load and execute single script
-    inject.js('/path/to/file.js')
-    
-    // load single css file
-    inject.css('/path/to/file.css')
-    
-    // load a script and execute a function after it has been loaded
-    inject.js('/path/to/file.js', function() {
+    <script>
+        // load and execute single script
+        inject.js('/path/to/file.js')
         
-    });
-    
-    // load a css file and execute a function after it has been loaded
-    inject.css('/path/to/file.css',function(){
+        // load single css file
+        inject.css('/path/to/file.css')
         
-    });
+        // load a script and execute a function after it has been loaded
+        inject.js('/path/to/file.js', function() {
+            
+        });
+        
+        // load a css file and execute a function after it has been loaded
+        inject.css('/path/to/file.css',function(){
+            
+        });
+    </script>
 
 ### Nesting
 You can use inject.js() or inject.css() inside the callback to load additional ressource which depend on previous injected files.
 
-    inject.js('/path/to/jquery-1.7.1.min.js',function(){
-        inject.js('/path/to/jquery.plugin.one.js', function(){
-            $('body').one();
-        })
-        inject.js('/path/to/jquery.plugin.two.js', function(){
-            $('body').two();
-        })
-    });
+    <script>
+        inject.js('/path/to/jquery-1.7.1.min.js',function(){
+            inject.js('/path/to/jquery.plugin.one.js', function(){
+                $('body').one();
+            })
+            inject.js('/path/to/jquery.plugin.two.js', function(){
+                $('body').two();
+            })
+        });
+    </script>
 
 BUT: I don't recommend doing it because the dependend files are requested only after the first file has loaded.
 
